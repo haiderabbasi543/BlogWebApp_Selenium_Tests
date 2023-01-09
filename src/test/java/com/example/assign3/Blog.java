@@ -16,7 +16,7 @@ public class Blog {
     public String createBlog(String x,String y, String z) {
 
 
-        open("http://3.144.37.216:41960");
+        open("http://ec2-3-144-250-142.us-east-2.compute.amazonaws.com:41960/");
         //click start a new discussion button
        
         $(By.xpath("/html/body/div/a")).click();
@@ -34,7 +34,7 @@ public class Blog {
 
     public boolean readBlog() {
         
-        open("http://3.144.37.216:41960");
+        open("http://ec2-3-144-250-142.us-east-2.compute.amazonaws.com:41960/");
         String Title_Before=$(By.xpath("/html/body/div/div[1]/div/h4")).getText();
         $(By.xpath("/html/body/div/div[1]/div/a[1]")).click();
         String Title_After=$(By.xpath("/html/body/div/h1")).getText();
@@ -50,7 +50,7 @@ public class Blog {
 
     public boolean EditBlog(String x){
         
-        open("http://3.144.37.216:41960");
+        open("http://ec2-3-144-250-142.us-east-2.compute.amazonaws.com:41960/");
         $(By.xpath("/html/body/div/a")).click();
         $(By.id("title")).setValue("Blog to be edited");
         $(By.id("description")).setValue("Description EE");
@@ -90,7 +90,7 @@ public class Blog {
     public boolean deleteBlog() {
 
         
-        open("http://3.144.37.216:41960");
+        open("http://ec2-3-144-250-142.us-east-2.compute.amazonaws.com:41960/");
         $(By.xpath("/html/body/div/a")).click();
         $(By.id("title")).setValue("Blog to be deleted");
         $(By.id("description")).setValue("Description D");
@@ -114,7 +114,7 @@ public class Blog {
 
     public boolean viewAllArticles() {
 
-        open("http://3.144.37.216:41960");
+        open("http://ec2-3-144-250-142.us-east-2.compute.amazonaws.com:41960/");
 
         $(By.xpath("/html/body/div/a")).click();
         $(By.id("title")).setValue("SampleH");
